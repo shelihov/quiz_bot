@@ -109,8 +109,8 @@ async def help_command(message: Message):
         "/help — справка\n"
         "\n"
         "Админ-команды:\n"
-        "/add_user <id> <YYYY-MM-DD> — добавить подписчика\n"
-        "/remove_user <id> — удалить подписчика\n"
+        "/add_user <code>id</code> <code>YYYY-MM-DD</code> — добавить подписчика\n"
+        "/remove_user <code>id</code> — удалить подписчика\n"
         "/users — список пользователей",
         parse_mode="HTML"
     )
@@ -275,10 +275,7 @@ async def main():
         BotCommand(command="start", description="Запуск бота"),
         BotCommand(command="profile", description="Профиль"),
         BotCommand(command="generate", description="Выбрать тему вручную"),
-        BotCommand(command="help", description="Помощь"),
-        BotCommand(command="add_user", description="(Админ) Добавить пользователя"),
-        BotCommand(command="remove_user", description="(Админ) Удалить пользователя"),
-        BotCommand(command="users", description="(Админ) Список пользователей")
+        BotCommand(command="help", description="Помощь")
     ])
     dp = Dispatcher()
     dp.include_router(router)
