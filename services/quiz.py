@@ -45,7 +45,7 @@ async def generate_quiz(message, prompt, uid):
         "Строго без лишних слов, только чистая структура."
         )
         response = client.chat.completions.create(
-            model="deepseek/deepseek-r1-0528-qwen3-8b:free",
+            model="moonshotai/kimi-dev-72b:free",
             messages=[{"role": "user", "content": formatted_prompt}]
         )
         text = response.choices[0].message.content
