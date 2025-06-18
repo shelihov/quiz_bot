@@ -45,7 +45,7 @@ async def generate_quiz(message, prompt, uid):
         "Строго без лишних слов, только чистая структура."
         )
         response = client.chat.completions.create(
-            model="moonshotai/kimi-dev-72b:free",
+            model="google/gemini-2.0-flash-exp:free",
             messages=[{"role": "user", "content": formatted_prompt}]
         )
         text = response.choices[0].message.content
