@@ -1,1 +1,1 @@
-worker: python quiz_bot/main.py
+worker: python main.py
